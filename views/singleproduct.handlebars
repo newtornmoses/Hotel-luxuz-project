@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+    {{!-- header setion
+    <section class="header-shop">
+        <h1>{{shop.title}}</h1>
+        <img class="img-responsive" src="/images/fries2.jpg" alt="burger">
+
+        </div>
+    </section> --}}
+
+    {{!-- shop section --}}
+    <section class="singleproduct">
+        <div class="container">
+            <h1 class="text-center">
+                <u>{{shop.title}}</u> <a href="/hotelluxuz/shop" class="btn btn-primary">Back to shop</a>
+            </h1>
+
+
+            <div class="col-md-12 shop">
+
+                <ul>
+
+
+                    <div class="col-xs-8   col-sm-8 col-md-8 col-md-offset-2">
+                        <li>
+                            <div class="contentSingle">
+                                <h2 class="text-center list-group-item title">
+                                    {{shop.title}}
+                                </h2>
+                                <span>
+                                    <img class="img-responsive" src="{{shop.image}}" alt="{{shop.title}}">
+                                </span>
+                                <div class="details list-group-item text-primary">
+                                    <p>Descrition : {{shop.description}}</p>
+                                    <span class="btn btn-primary price">Price: $ {{shop.price}}</span>
+                                    <a href="/hotelluxuz/shop/cart/{{shop._id}}" class="btn btn-success btn-block">Add To Cart</a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+                </ul>
+
+
+            </div>
+           
+         <a href="/hotelluxuz/shop" class="btn btn-primary">Back to shop</a>
+         {{#if user.isAdmin}}
+         <a href="/hotelluxuz/shop/edit/{{shop._id}}" class="btn btn-info pull-right">Edit product</a>
+         {{/if}}
+        </div>
+        {{ user}}
+         
+    </section>
+
+    <!--copyright-->
+    <section class="copyright">
+        <p id="year"></p>
+        <p id="developer"> Developed & Desgned By Newtorn Moses L</p>
+    </section>
+
+    <!--javascript-->
+    <script src="/js/main.js"></script>
+
+    
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+
+<link rel="stylesheet" href="/css/style.css">
+
+<div class="singleroomwrapper">
+
+    <h2>ROOM NO: {{room.room_number}}</h2>
+    {{#if success}}
+    <div class="col-md-6 col-md-offset-3 alert alert-success">
+        <h4 class="text-center">{{success}} for {{room.room_number}}</h4>
+    </div>
+
+    {{/if}} {{#if danger}}
+
+    <div class="col-md-6 col-md-offset-3 alert alert-danger">
+        <h4 class="text-center">{{danger}} for room {{room.room_number}}</h4>
+    </div>
+    {{/if}}
+    <div class="containr">
+        <div class="col-md-8 ">
+            <div class="col-md-12 singleroom">
+                <ul class="list-group">
+
+                    <li class="list-group">
+
+                        <div class="col-md-4">
+                            <h4>Room Class:
+                                <span class="badge"> {{room.class}}</span>
+                            </h4>
+                            <h4>Book status: {{#if room.isActive}}
+                                <span class="badge bagde-danger"> Booked </span>
+                                {{else}}
+                                <span class="badge bagde-primary"> Not Booked </span>
+
+                                {{/if}}
+                            </h4>
+                            <h4>Room Number:
+                                <span class="badge"> {{room.room_number}}</span>
+                            </h4>
+                            <h4>Room Type:
+                                <span class="badge"> {{room.room_type}}</span>
+                            </h4>
+
+                            <h4>Beds:
+                                <span class="badge"> {{room.beds}}</span>
+                            </h4>
+                            {{#if room.paid}}
+                            <h4>Paid:
+                                <span class="badge paid"> {{room.paid}} </span>
+                                <i class="fa fa-check"></i>
+                            </h4>
+                            {{else}}
+                            <h4>Paid:
+                                <span class="badge notpaid"> {{room.paid}}</span>
+                            </h4>
+                            {{/if}}
+                            <h4>Meals:
+                                <span class="badge"> {{room.meals}}
+                                    <span class="badge"></span>
+                            </h4>
+                            <h4>Price per Night:$
+                                <span class="badge">{{room.price}}</span>
+                            </h4>
+                            <h4>Max Guests:
+                                <span class="badge">{{room.max_guests}}</span>
+                            </h4>
+                            <h4>HI-FI Wifi:
+                                <span class="badge">{{room.wifi}}</span>
+                            </h4>
+
+                            
+                            <h4>Medical Doctor:
+                                <span class="badge">{{room.medical_service}}</span>
+                            </h4>
+                            <h4>Balcony:
+                                <span class="badge">{{room.balcony}}
+                                    <span class="badge"></span>
+                            </h4>
+
+                        </div>
+
+                        <div class="col-md-8">
+                            <img class="img-responsive" src="{{room.imageUrl}}" alt="">
+                        </div>
+
+
+
+
+                    </li>
+                </ul>
+            </div>
+           
+            <a href="/hotelluxuz/hotel/rooms" class="btn btn-success">Back to Rooms</a>
+
+            {{#if room.paid}}
+            <a class="btn btn-danger">Oopss.. the room is already paid</a>
+            {{else}} {{#if room.isActive}}
+            <a link href="/hotelluxuz/hotel/rooms/room/checkout/{{room._id}}" class="btn btn-primary pull-right">Check Out</a>
+
+            {{/if}}
+            {{#if user.isAdmin}}
+            <a href="/hotelluxuz/hotel/rooms/edit/{{room._id}}" class="btn btn-info">Edit</a>
+            {{/if}}
+            {{#if room.isActive}}
+
+            <form class="pull-right" action="/hotelluxuz/hotel/rooms/deactivate/{{room._id}}" method="post">
+                <button type="submit" class="btn btn-danger">Cancle Book </button>
+            </form>
+            {{else}}
+            <form class="pull-right" action="/hotelluxuz/hotel/rooms/activate/{{room._id}}" method="post">
+                <button type="submit" class="btn btn-primary">Book Now !!!</button>
+            </form>
+            {{/if}} {{/if}}
+
+        </div>
+        <br>
+        <br> {{!-- date picker --}}
+ 
+
+      {{#if room.paid}}
+        <div class="timeRemaining">
+            <h4>{{freetime}}</h4>
+            <a class="btn btn-info">Room will be free soon !!!   <span class="badge">{{freetime}}</span></a>
+        </div>
+
+        {{else}}
+
+        <div class="totalprice">
+            <h3>Total:$ {{room.Total_Price }} </h3>
+        </div>
+        <br>
+        <div class="totaldays">
+            {{#if session.period}}
+            <h4>Stay Time: {{session.period}}  days </h4>
+            {{else}}
+            <h4>Stay Time: {{booked}}  </h4>
+            
+            {{/if}}
+        </div>
+
+        <div class="dateSchedule">
+
+            <h4>Check_in Time:
+                {{#if session.Check_in_Time}}
+                <span class="badge">{{session.Check_in_Time}} </span>
+                {{else}}
+                <span class="badge">{{room.Check_in_Time}} </span>
+                {{/if}}
+            </h4>
+
+            <h4>Check_out Time:
+                {{#if session.Check_out_Time}}
+                <span class="badge">{{session.Check_out_Time}} </span>
+                {{else}}
+                <span class="badge">{{room.Check_out_Time}} </span>
+                {{/if}}
+            </h4>
+        </div>
+        <br>
+        <br>
+
+        <div class="col-xs-12 col-md-3 calender">
+            <h5 class="text-center">My Calender</h5>
+            <form action="/hotelluxuz/hotel/rooms/room/{{room._id}}" method="post">
+                <label for="checkin">Check In</label>
+                <input type="text" class="form-control " name="check_in" id="" placeholder="2018-02-23 YYYY-MM-DD">
+
+                <label for="checkin">Check Out</label>
+                <input type="text" class="form-control" name="check_out" id="" placeholder="2018-02-27 YYYY-MM-DD">
+                <button type="submit" class="btn btn-success col-md-offset-4">confim date</button>
+            </form>
+        </div>
+
+{{/if}}
+
+        {{!-- end of date --}}
+
+    </div>
+
+  
+</div>
+  <!--copyright-->
+    <section class="copyright">
+        <p id="year"></p>
+        <p id="developer"> Developed & Desgned By Newtorn Moses L</p>
+    </section>
+
+    <!--javascript-->
+    <script src="/js/main.js"></script>
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-12">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/font/css/font-awesome.min.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container checkout">
+<div class="col-md-6 col-md-offset-3">
+      <h1 > <i class="fa fa-moey"> <u>Check Out  </i> </u></h1>
+
+        <h4> Total: ${{totalprice}}.00</h4>
+</div>
+       {{#if error}}
+        <div class="col-md-3 col-md-offset-6 alert alert-danger">
+        {{error}}
+        </div>
+         
+{{/if}}
+        <form class="col-md-6 col-md-offset-3"  id="checkout" action="/hotelluxuz/shop/checkout/stripe" method="Post">
+
+            <div class="col-md-12 input">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="your name" class="form-control" required>
+            </div>
+
+            <div class="col-md-12 input">
+                <label for="name">Address</label>
+                <input type="text" name="address" id="address" placeholder="your address" class="form-control" required>
+            </div>
+
+            <div class="col-md-12 input">
+                <label for="name">Card Holder Name</label>
+                <input type="text" name="cardname"  id="cardname"placeholder="your card holder name" class="form-control" required>
+            </div>
+
+            <div  class="input">
+                <label class="col-md-12" for="name">Phone Number</label>
+                <div class="col-md-2">
+                <input type="text" name="phone1" id="phone" placeholder="+44" class="form-control" required>
+            </div>
+               <div class="col-md-4">
+                <input type="text" name="phone2" id="phone" placeholder="5432" class="form-control" required>
+            </div>
+
+               <div class="col-md-4">
+                <input type="text" name="phone3" id="phone" placeholder="323" class="form-control" required>
+            </div>
+            </div>
+
+
+            <div class="col-md-6 input">
+                <label for="name">Country</label>
+                <input type="text" name="month" id="exp_mth" placeholder="your country" class="form-control" required>
+            </div>
+
+            <div class="col-md-12 input">
+                
+            </div>
+<hr>
+            <div class="col-md-3 input">
+                <label for="name">country code</label>
+                <input type="text" name="year" id="exp_yr" placeholder="+44" class="form-control" required>
+            </div>
+
+            
+
+            <br>
+            <hr>
+            <div class="col-md-12">
+            
+
+
+            <div class="col-md-4 stripe">
+
+                <button type="submit" class="btn btn-primary"  id="stripe_btn" >PAY WITH CARD </button>
+                
+                {{!-- <a href="/shop/checkout/stripe" class="btn btn-primary  ">PAY WITH STRIPE </a> --}}
+                
+            </div>
+
+            <div class="col-md-3 stripe">
+                <a href="/shop/checkout/cashdelivery" class="btn btn-success  " disabled>CASH ON DELIVERY</a>
+                
+            </div>
+
+            <div class="col-md-12">
+                <img class="img-responsive" src="/images/paypal.jpg" alt="">
+            </div>
+
+            </div>
+
+ 
+
+ 
+ </script>
+ <script
+  src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="pk_test_BaS7sO9TqkPmmPjyhOPKhHvQ"
+  data-amount={{totalprice}}*1000 
+  data-name="Hotel Luxuz"
+  data-description="shop"
+  data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+  data-locale="auto">
+</script> 
+
+        </form>
+                
+        
+    </div>
+    <div class="container">
+              <a href="/hotelluxuz/shop/cart/shopping_cart" class="btn btn-primary pull-right "><i class="fa fa-shopping-cart"> Back to your Cart</i></a>
+                
+                <a href="/hotelluxuz/shop" class="btn btn-success  ">  <i class="fa fa-home">  Back to shop</i></i></a>
+
+</div>
+
+
+</body>
+
+</html>

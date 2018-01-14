@@ -1,0 +1,108 @@
+ <div class="col-md-12">
+    {{#if success}}
+<a class="alert alert-success">
+  {{success}}
+</a>
+ {{/if}}
+
+<div class="col-md-6 col-md-offset-3 container">
+
+  <h2 class="text-center">
+ 
+  
+    <u>MY PROFILE </u>
+  </h2>
+
+</div>
+ 
+  {{#if user}} 
+     {{#if orders}}
+     <div class="col-md-4 pull-right">
+  <a href="/hotelluxuz/shop" class="btn btn-success pull-right">Back To Shop</a>
+     </div>
+  
+  <h4> Thank You {{user.username}} for Shopping</h4>
+
+
+  
+
+
+
+
+
+  <ol>
+    
+    {{# each orders}}
+    <li class="list-group-item">
+      
+     
+      {{# each items}}
+       <h4>Item: {{this.item.title}}</h4>
+      <h4>Quantity: {{this.qty}}</h4>
+       <h4>Price:$ {{this.item.price}}.00</h4>
+        
+
+     
+     
+
+      
+      
+     
+{{/each}}
+
+ <h4>Purchased by: {{this.name}} </h4>
+
+<h4>Totalprice: $ {{this.totalprice}}</h4>
+    
+
+ <h5>Payment Id: {{this.paymentid}}</h5>
+      <h5>Address: {{this.address}}</h5>
+      <h5>Date: {{this.date}}</h5>
+
+
+    </li>
+    {{/each}}
+  </ol>
+  {{else}}
+  <h5>Your Shopping List is Empty please first shop</h5>
+{{/if}}
+  
+  <a href="/hotelluxuz/shop" class="btn btn-success">Back To Shop</a>
+</div>
+{{else}}
+
+<div class="col-md-8 col-md-offset-3">
+<h2 class="center">You must be logged in to see your profile</h2>
+</div>
+
+<hr>
+<div class="col-md-8 col-md-offset-4">
+
+  <a href="/hotelluxuz/users/signup" class="btn btn-success">Sign up</a>
+  <a href="/hotelluxuz/users/login" class="btn btn-primary">Login</a>
+
+</div>
+
+
+
+<div class="col-md-8 col-md-6">
+
+  <h4 style="margin-top:50px" class="text-center">  </h4>
+</div>
+
+
+<div class="col-md-12">
+
+
+<div class="col-md-6 col-md-offset-4">
+  <a href="/hotelluxuz/shop" class="btn btn-info ">Back To Shop</a>
+
+  
+</div>
+</div>
+
+
+
+
+
+{{/if}}

@@ -1,0 +1,521 @@
+body {
+    background: rgb(7, 53, 61);
+    background: url('/images/king1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.title {
+    color: rgb(44, 44, 44);
+}
+
+.content {
+    margin-bottom: 40px;
+}
+
+.content img {
+    height: 250px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.roomsContainer {
+    background-image: linear-gradient(rgba(7, 6, 6, 0.685), rgba(14, 16, 20, 0.603)), url(../../images/the-mgm-grand-in-las-vegas-has-unveiled-a-line-of-healthy-hotel-rooms.jpg);
+}
+
+.contact3 {
+    float: right;
+    height: 50px;
+    background: rgba(155, 146, 26, 0.7);
+    background: rgba(242, 252, 59, 0.315);
+    -webkit-border-block-end: 1px solid rgba(202, 191, 128, 0.253);
+    border-block-end: 1px solid rgba(202, 191, 128, 0.253);
+    border-bottom: 1px solid rgba(245, 245, 245, 0.534);
+    width: 100%;
+    padding-right: 10px;
+}
+
+.contact4 {
+    float: right;
+    height: 50px;
+    background: rgba(155, 146, 26, 0.7);
+    background: rgba(11, 13, 17, 0.849);
+    -webkit-border-block-end: 1px solid rgba(202, 191, 128, 0.253);
+    border-block-end: 1px solid rgba(202, 191, 128, 0.253);
+    border-bottom: 1px solid rgba(245, 245, 245, 0.534);
+    width: 100%;
+    padding-right: 10px;
+}
+
+.contact3 li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.contact4 li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.contact3 li a {
+    color: rgb(29, 29, 29);
+    padding: 15px 0px;
+}
+
+.contact4 li a {
+    color: rgb(231, 231, 231);
+    padding: 15px 0px;
+}
+
+.frontPage3 {
+    background-image: linear-gradient(rgba(22, 22, 22, 0.685), rgba(19, 19, 19, 0.5)), url(../images/1.jpg);
+    background-image: linear-gradient(rgba(22, 22, 22, 0.335), rgba(19, 19, 19, 0.507)), url(../images/1.jpg);
+    background-image: linear-gradient(rgba(7, 6, 6, 0), rgba(5, 4, 4, 0)), url(../../images/fries2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.frontPage4 {
+    width: 100%;
+    height: 100px;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.navigation3 {
+    float: right;
+    list-style-type: none;
+    padding: 5px 10px 10px 5px;
+    background: rgba(0, 0, 0, 0.514);
+}
+
+.navigation4 {
+    float: right;
+    list-style-type: none;
+    padding: 5px 10px 10px 5px;
+    background: rgba(0, 0, 0, 0.514);
+}
+
+.navigation3 li {
+    display: inline-block;
+    padding: 8px;
+    margin-left: 20px;
+}
+
+.navigation4 li {
+    display: inline-block;
+    padding: 8px;
+    margin-left: 20px;
+}
+
+.navigation3 i {
+    color: white;
+    font-size: 1em;
+}
+
+.navigation4 i {
+    color: white;
+    font-size: 1em;
+}
+
+.navigation3 li a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 0.2px solid rgba(218, 145, 21, 0.096);
+    transition: all 0.5s ease-in-out;
+}
+
+.navigation4 li a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 0.2px solid rgba(218, 145, 21, 0.096);
+    transition: all 0.5s ease-in-out;
+}
+
+.navigation3 li a:hover {
+    border-bottom: 1px solid orange;
+}
+
+.navigation4 li a:hover {
+    border-bottom: 1px solid orange;
+}
+
+.header-shop h1 {
+    z-index: 1000;
+    font-size: 45px;
+    color: rgb(255, 255, 255);
+    top: 250px;
+    left: 10%;
+    position: absolute;
+    border: 1px solid rgba(128, 128, 128, 0.774);
+    background: rgba(25, 133, 184, 0.466);
+    padding: 10px;
+}
+
+.heder-shop img {
+    position: relative;
+    background-size: cover;
+}
+
+.shop {
+    width: 100%;
+    height: auto;
+}
+
+.price {
+    margin: 0% 0% 2% 40%;
+}
+
+.contentSingle img {
+    width: -moz-fit-content;
+    height: auto;
+}
+
+.buttons {
+    margin-left: 8%;
+}
+
+.description {
+    max-height: 50px;
+    overflow: hidden;
+    border-bottom: 1px dotted grey;
+}
+
+.shopping img {
+    width: 10%;
+}
+
+.shopping li {
+    color: black
+}
+
+.total {
+    font-size: 22px;
+}
+
+.action {
+    background: rgba(7, 32, 39, 0.822);
+    border-radius: 20px;
+    margin-left: -20px;
+    height: 120px;
+    color: grey;
+}
+
+.action i:hover {
+    cursor: pointer
+}
+
+.action i {
+    border: 1px solid white;
+    padding: 5px;
+    border-radius: 20px;
+    text-align: justify;
+}
+
+.paypal {
+    background: url('../images/paypal.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 50px;
+    margin-top: 10px;
+    border: none;
+}
+
+.stripe {
+    margin-top: 10px;
+}
+
+.checkout {
+    background: white;
+    color: rgb(80, 80, 80);
+}
+
+.checkout label {
+    font-weight: 500;
+}
+
+.checkout input:placeholder {
+    opacity: 0;
+}
+
+.shopheader {
+    background: rgb(136, 138, 15);
+}
+
+.shopheader a {
+    color: white
+}
+
+table tr:hover {
+    color: rgb(29, 29, 29);
+    font-weight: bold;
+    background: rgba(62, 110, 187, 0.466)
+}
+
+.singleroom {
+    box-shadow: 1px 2px 4px black;
+    border: 1px solid rgba(128, 128, 128, 0.363);
+}
+
+.singleroomwrapper {
+    background: rgb(27, 26, 26);
+    min-height: 100vh;
+    color: white;
+}
+
+.singleroomwrapper h2 {
+    margin: 0px 0px 23px 0px;
+    padding-top: 40px
+}
+
+.singleroomwrapper h2 {
+    margin-left: 40px
+}
+
+.singleroomwrapper h3 {
+    margin-top: -23px;
+}
+
+span.bagde-danger {
+    background: rgb(139, 0, 0);
+}
+
+span.bagde-primary,
+span.paid {
+    background: rgb(5, 139, 0);
+}
+
+span.pending {
+    background: rgb(126, 134, 6);
+}
+
+.gear {
+    animation: gear 2s linear infinite;
+}
+
+@keyframes gear {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes gear {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes gear {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.calender {
+    background: grey
+}
+
+.calender h5 {
+    margin-top: 10px;
+    background: rgb(42, 42, 42);
+    padding: 5px;
+}
+
+.myform {
+    background: rgb(34, 33, 33);
+    background: url('/images/king1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    min-height: 900px;
+    width: 100%;
+}
+
+.loginform,
+.signform {
+    box-shadow: 1px 2px 4px rgb(17, 17, 17);
+    border: 1px solid rgba(243, 243, 243, 0.349);
+    background: -webkit-linear-gradient(rgba(153, 153, 153, 0.383), rgba(15, 15, 15, 0.26));
+    padding: 5%;
+    color: rgb(255, 255, 255);
+}
+
+.dispalySearch {
+    background: rgba(29, 119, 29, 0.493);
+    color: rgb(211, 211, 211);
+    font-size: 12px;
+}
+
+.noConfirm {
+    color: rgb(255, 255, 255);
+    animation: confirm 2s ease-in-out infinite;
+    transition: all 6s ease-in-out;
+}
+
+@keyframes confirm {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@-moz-keyframes confirm {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+@-webkit-keyframes confirm {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.advancedsearch {
+    transform: translateY(-990px);
+    margin: -15% 1%;
+    color: black;
+    /* height: 100px; */
+    transition: all 2s ease-in-out;
+}
+
+.advancedCloseBtn i {
+    color: red
+}
+
+.showForm {
+    transform: translateY(10px);
+    transition: all 2s ease-in-out;
+    display: block;
+    margin: 5% 10%;
+    padding: 0% 10%;
+    text-align: center;
+    color: black;
+    height: 300px;
+}
+
+.advancedsearch label {
+    color: white;
+}
+
+.advancedsearch h4 {
+    color: white;
+}
+
+.advancedsearch .form {
+    background: rgba(22, 21, 21, 0.274);
+    border: 1px solid rgb(73, 100, 136);
+    min-height: 95%;
+    padding: 4% 1%;
+}
+
+.advancedsearch .form i {
+    color: rgb(46, 179, 231);
+    position: absolute;
+    top: 65%;
+    left: 91%;
+}
+
+option {
+    color: black;
+}
+
+.advancedsearch input[type=text] {
+    margin: 10px;
+}
+
+.advancedsearch .btn {
+    margin: 3% 17%;
+}
+
+.btnclose {
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.btnclose:hover {
+    background: rgba(133, 29, 29, 0.678);
+    color: black;
+    cursor: pointer;
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.myhambager i {
+    display: none
+}
+
+
+/* media queries  966px*/
+
+@media (max-width:966px) {
+    .showForm {
+        margin-bottom: 100px
+    }
+}
+
+
+/* media queries  866px*/
+
+@media (max-width:866px) {
+    .myhambager i {
+        display: block
+    }
+    .contact4 li:nth-child(1) {
+        font-size: 12px;
+        display: block
+    }
+    .contact4 li:nth-child(2) {
+        font-size: 12px
+    }
+}
+
+
+/* media queries  560*/
+
+@media (max-width:600px) {
+    .contact4 li:nth-child(1) {
+        display: none
+    }
+    .contact4 li:nth-child(2) {
+        display: none
+    }
+    .loggedin {
+        display: none;
+    }
+}
+
+
+/* hide stripe buttons */
+
+.stripe-button-el {
+    display: none;
+}

@@ -1,0 +1,40 @@
+    <link href="/css/style.css" rel="stylesheet">
+
+<div class="content myform">
+    <div class="col-xs-8 col-xs-offset-2 col-md-6 col-md-offset-2">
+       {{#if error}}
+              <div class="col-md-12 alert alert-danger">
+
+                {{#each error}}
+        {{this}}
+
+        {{/each}}
+         </div>
+         {{/if}}
+         <h1 class="text-center"> <u> Hotel Luxuz Sign up</u></h1>
+        <form class="signform" method="POST" action="/hotelluxuz/users/signup">
+            <h2 style="color:rgb(64, 73, 83)" class="text-center">sign up</h2>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" name="email" class="form-control" placeholder="enter email">
+            </div>
+
+            <div class="form-group">
+                <label for="name">User Name:</label>
+                <input type="text" name="username" class="form-control" placeholder="enter username">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Password:</label>
+                <input type="password" name="password" class="form-control" placeholder="enter password">
+            </div>
+
+            
+
+            <button type="submit"  class="btn btn-success col-xs-offset-4 col-md-offset-4" >Sign up</button>
+            <h5>Already a member?, please Login here <a href="/hotelluxuz/users/login" >Login</a></h5>
+
+        </form>
+
+    </div>
+</div>

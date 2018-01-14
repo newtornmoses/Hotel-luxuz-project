@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/font/css/font-awesome.min.css">
+    
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <div class="  container shopping">
+        <h1 class="text-center">
+            <u> <i class="fa fa-shopping-cart"></i> Shopping Cart</u>
+        </h1>
+
+        {{success}}
+        {{# if shop}}
+
+<div class="col-md-12">
+        <ul class="list-group ">
+            {{# each shop}}
+            <div class="col-md-10">
+            <li class="list-group-item">
+       
+                <span class="badge">Quantity {{this.qty}} </span>    <h5>Item: {{this.item.title}}</h5>   
+                <span><img class="img-responsive" src="{{this.item.image}}" alt=""></span>  
+  
+  
+  </li>
+       
+
+            <li class="list-group-item">
+                Total:
+                <span class="badge"> $ {{this.price}}.00</span>
+                
+                
+            </li>
+</div>
+
+            <div class=" action">
+
+      <h5 class="text-center text-danger "><a class="text-danger " href="/hotelluxuz/shop/cart/removegroup/{{this.item._id}}"> <i class="fa fa-remove "></i> Remove Group</h5></a>
+      <h5 class="text-center text-success "> <a  class="text-success " href="/hotelluxuz/shop/cart/additems/{{this.item._id}}"> <i class="fa fa-plus "> </i> Add items</h5></a>
+      
+      <h5 class="text-center text-info "><a  class="text-info " href="/hotelluxuz/shop/cart/reduceOne/{{this.item._id}}"><i class="fa fa-minus "></i> Reduce items</h5></a>
+    
+  </div>
+        </ul>
+  {{/each}}
+      
+        </div>
+<div class="col-md-12">
+        <ul class="list-group">
+            <li class="list-group-item total">
+
+
+                Total items
+                <span class="badge total"> {{cart.totalQty}}</span>
+                <br> Grand Total Price
+                <span class="badge total"> $ {{totalprice}}.00</span>
+
+
+
+
+
+
+
+            </li>
+        </ul>
+
+        <h3 class="text-center"> Happy Shopping !!!</h3>
+        <a href="/hotelluxuz/shop/checkout/form" class="btn btn-success pull-right">Check Out</a>
+        
+
+
+        {{else}}
+        <h3 class="text-center">No products in your cart...plz go back and shop</h3>
+
+        {{/if}}
+
+        <a href="/hotelluxuz/shop" class="btn btn-primary">Back to shop</a>
+
+    </div>
+    </div>
+</body>
+
+</html>

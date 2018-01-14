@@ -1,0 +1,1198 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100vh;
+    min-width: 100%;
+    overflow-x: hidden;
+}
+
+.frontPage h1 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+}
+
+.frontPage h3 {
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 20%;
+    font-weight: bold;
+    font-size: 3em;
+    color: orange;
+}
+
+.dine .btn {
+    display: inline-block;
+    background: none;
+    transition: all 0.5s ease-in-out;
+    width: 500%;
+    border: 1px solid white;
+}
+
+.dine .btn:hover {
+    transition: all 0.5s ease-in-out;
+    display: inline-block;
+    background: rgba(0, 238, 255, 0.534);
+    border: 1px solid rgba(255, 255, 255, 0.226);
+}
+
+.frontPage .dine {
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 40%;
+    font-weight: bold;
+    font-size: 2em;
+    color: rgb(14, 13, 13);
+}
+
+.frontPage {
+    background-image: linear-gradient(rgba(22, 22, 22, 0.685), rgba(19, 19, 19, 0.5)), url(../images/1.jpg);
+    background-image: linear-gradient(rgba(22, 22, 22, 0.335), rgba(19, 19, 19, 0.507)), url(../images/1.jpg);
+    background-image: linear-gradient(rgba(7, 6, 6, 0.335), rgba(5, 4, 4, 0.507)), url(../images/restaurant/imagef.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.checkroom a {
+    margin-right: 10px;
+    height: 40px;
+    margin-top: 5px;
+    line-height: 5px
+}
+
+.checkroom a:hover {
+    background: rgba(33, 95, 95, 0.514);
+    border: 1px solid rgba(179, 178, 178, 0.87);
+}
+
+.navigation {
+    float: right;
+    list-style-type: none;
+    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.514);
+}
+
+.navigation li {
+    display: inline-block;
+    padding: 10px 0;
+    margin-left: 20px;
+}
+
+.navigation i {
+    color: white;
+    font-size: 1em;
+}
+
+.navigation li a {
+    color: white;
+    text-decoration: none;
+    border-bottom: 0.2px solid rgba(218, 145, 21, 0.096);
+    transition: all 0.5s ease-in-out;
+}
+
+.navigation li a:hover {
+    border-bottom: 1px solid orange;
+}
+
+.navigation .checkroomnav {
+    display: none;
+}
+
+.logo h2 {
+    color: white;
+    font-size: 52px;
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding: 10px;
+    float: left;
+    margin: 20px;
+    display: inline-table;
+}
+
+.logo:after {
+    clear: both;
+}
+
+.contact .hambager {
+    display: none;
+}
+
+.contact3 .hambager {
+    display: none;
+}
+
+.navroom a {
+    display: none;
+}
+
+.contact h2 {
+    display: none;
+}
+
+.smallscreen h4 {
+    display: none;
+}
+
+
+/* media queries  480*/
+
+@media (max-width:480px) {
+    .smallscreen h4 {
+        display: block;
+        margin-top: 30px;
+    }
+    .contact h2 {
+        display: block;
+        margin-top: 0px;
+        margin-left: -80px;
+        font-size: 25px;
+    }
+    .contact li i {
+        display: none;
+    }
+    .contact li a {
+        display: none;
+    }
+}
+
+
+/* media queries  560*/
+
+@media (max-width:600px) {
+    .loggedin {
+        display: none;
+    }
+    .fullscreen {
+        display: none;
+    }
+    .discount img {
+        width: 150px;
+    }
+    .discount h4 {
+        margin: 0px 130px;
+    }
+}
+
+
+/* hide stripe button */
+
+button .stripe-button-el {
+    display: none;
+    overflow: hidden;
+    display: inline-block;
+    visibility: hidden !important;
+    background-image: -webkit-linear-gradient(#28a0e5, #015e94);
+    background-image: -moz-linear-gradient(#28a0e5, #015e94);
+    background-image: -ms-linear-gradient(#28a0e5, #015e94);
+    background-image: -o-linear-gradient(#28a0e5, #015e94);
+    background-image: -webkit-linear-gradient(#28a0e5, #015e94);
+    background-image: -moz-linear-gradient(#28a0e5, #015e94);
+    background-image: -ms-linear-gradient(#28a0e5, #015e94);
+    background-image: -o-linear-gradient(#28a0e5, #015e94);
+    background-image: linear-gradient(#28a0e5, #015e94);
+    -webkit-font-smoothing: antialiased;
+    border: 0;
+    padding: 1px;
+    text-decoration: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+
+/* media queries  866*/
+
+@media (max-width:866px) {
+    .discount img {
+        display: none;
+    }
+    .contact .hambager {
+        display: block;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+    .contact3 .hambager {
+        display: block;
+        margin-right: 20%;
+        cursor: pointer;
+    }
+    .contact li i {
+        margin-left: -50px;
+    }
+    .contact li {
+        margin-left: -80px;
+    }
+    .header-shop h1 {
+        font-size: 30px;
+        margin-top: 70px;
+    }
+    .dine .btn {
+        display: inline-block;
+        background: none;
+        transition: all 0.5s ease-in-out;
+        width: 300%;
+        border: 1px solid white;
+        font-size: 12px;
+    }
+    .frontPage h1 {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        font-weight: bold;
+        font-size: 2em;
+        color: white;
+    }
+    .frontPage h3 {
+        text-align: center;
+        position: absolute;
+        top: 60%;
+        left: 20%;
+        font-weight: bold;
+        font-size: 2em;
+        color: orange;
+    }
+    .navigation li {
+        display: block;
+        width: auto;
+        padding: 10px 0;
+        margin-left: 20px;
+    }
+    .navigation3 li {
+        display: block;
+        width: auto;
+        padding: 10px 0;
+        margin-left: 20px;
+    }
+    .navigation {
+        display: none;
+        float: right;
+        list-style-type: none;
+        padding: 5px 10px;
+        background: rgba(0, 0, 0, 0.514);
+        transition: dispaly 8s ease-in-out;
+    }
+    .navigation3 {
+        display: none;
+        float: right;
+        list-style-type: none;
+        padding: 5px 10px;
+        background: rgba(0, 0, 0, 0.514);
+        transition: dispaly 8s ease-in-out;
+    }
+    .shownav {
+        display: block;
+        transition: display 8s ease-in-out;
+        float: right;
+        list-style-type: none;
+        padding: 5px 10px;
+        background: rgba(0, 0, 0, 0.514);
+    }
+    .checkroom a {
+        display: none;
+    }
+    .navroom a {
+        display: block;
+    }
+    .logo h2 {
+        color: white;
+        font-size: 25px;
+        border: 1px solid white;
+        border-radius: 50px;
+        width: 5%;
+        height: 5%;
+        text-align: center;
+        padding: 2%;
+        float: left;
+        margin: 5%;
+        display: inline-table;
+    }
+}
+
+
+/* end of media querry */
+
+.contact {
+    float: right;
+    height: 50px;
+    background: rgba(155, 146, 26, 0.7);
+    background: rgba(242, 252, 59, 0.315);
+    -webkit-border-block-end: 1px solid rgba(202, 191, 128, 0.253);
+    border-block-end: 1px solid rgba(202, 191, 128, 0.253);
+    border-bottom: 1px solid rgba(202, 191, 128, 0.253);
+    width: 100%;
+}
+
+.contact li {
+    display: inline-block;
+    margin-left: 50px;
+}
+
+.contact li a {
+    color: white;
+    padding: 15px 0px;
+}
+
+.info {
+    color: rgb(14, 13, 13);
+    color: white;
+    width: 100%;
+    min-height: 400px;
+    background: rgba(184, 181, 174, 0.692);
+    background: radial-gradient(rgba(12, 12, 12, 0.692) 90%, rgba(8, 8, 8, 0.685)), url(../images/raining-huang-31298.jpg);
+    background: radial-gradient(rgba(15, 15, 15, 0.692) 90%, rgba(8, 8, 8, 0.685)), url(../images/chuttersnap-371166.jpg);
+    background: linear-gradient(rgba(15, 15, 15, 0.829) 10%, rgba(12, 12, 12, 0)), url(../images/dan-gold-218878.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(17, 17, 17, 0.877)), url(../images/restaurant/eats.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(17, 17, 17, 0.877)) url(../images/restaurant/foodiesmain.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+.info .imgpannel {
+    color: rgb(14, 13, 13);
+    color: rgb(248, 244, 244);
+    bacground: rgba(5, 5, 5, 0.459);
+    tet-shadow: 1px 10px 10px rgb(19, 10, 41);
+    border-radius: 20px 20px 0px 0px;
+    height: auto;
+    text-align: justify;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 1px 3px 2px rgba(12, 10, 10, 0.712);
+}
+
+.info .imgpannel img {
+    width: 100%;
+}
+
+.info p {
+    display: block;
+    font-size: 1em;
+    width: auto;
+    min-height: 200px;
+    text-align: justify;
+    padding: 9px;
+    border-block-end: 0.5px solid rgba(59, 142, 153, 0.87);
+    border-left: 0.5px solid rgba(59, 142, 153, 0.767);
+    border-right: 0.5px solid rgba(59, 142, 153, 0.74);
+    box-shadow: inset 3px 0px 5px rgba(63, 63, 63, 0.808);
+}
+
+.info h1:after {
+    width: 100;
+    height: 1px;
+    background-color: orange;
+    display: block;
+    content: " ";
+}
+
+.cook {
+    height: 100vh;
+    background: linear-gradient(rgba(31, 30, 30, 0), rgba(32, 32, 32, 0.096)), url(../images/restaurant/restaurant.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.cook h3 {
+    font-size: 42px;
+}
+
+.cook h1 {
+    color: #727272;
+    font-size: 62px;
+}
+
+.cook h4 {
+    border: 1px solid rgba(128, 128, 128, 0.404);
+    font-size: 20px;
+    margin: 390px 0% 0% 3%;
+    display: inline-block;
+    padding: 20px
+}
+
+.services {
+    color: white;
+    width: 100%;
+    height: auto;
+    background: rgb(122, 107, 39);
+    background: rgb(32, 145, 185);
+    background: rgb(51, 4, 16);
+    background: rgb(195, 194, 194);
+    background: rgb(66, 1, 32);
+    background-image: linear-gradient(rgba(80, 74, 71, 0.925), rgb(100, 69, 3) 30%, rgba(80, 49, 34, 0.925)), url(../images/chuttersnap-394513.jpg);
+    background: linear-gradient(rgba(51, 4, 17, 0.692), rgba(0, 0, 0, 0.959) 30%), url(../images/chuttersnap-394513.jpg);
+    background-size: cover;
+    background: linear-gradient(rgba(230, 228, 228, 0.2), rgb(82, 80, 80));
+    background: linear-gradient(rgba(230, 228, 228, 0.2), rgb(214, 214, 214));
+    background: linear-gradient(rgba(31, 30, 30, 0.2), rgb(12, 10, 10)), url(../images/restaurant/wineandmeat.jpg);
+}
+
+.services .underline {
+    width: 200px;
+    height: 2px;
+    background: orange;
+    align-self: center;
+    position: absolute;
+    left: 43%;
+}
+
+.services .roundunderline {
+    width: 20px;
+    height: 20px;
+    background: #ffa500;
+    align-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateY(-10px);
+    border-radius: 50px;
+}
+
+.services .imagedesign {
+    width: 100%;
+    display: inline-block;
+    margin: 30px auto;
+}
+
+.imagedesign img {
+    border-radius: 10px 0px 5px 10px;
+    margin: 20px 10px;
+}
+
+#imgcontainer {
+    border: 1px solid white;
+    border-radius: 20px 0px 40px 0px;
+    box-shadow: inset 1px 2px 12px black;
+    padding: 10px;
+}
+
+#gymcontainer {
+    border: 1px solid white;
+    border-radius: 20px 0px 40px 0px;
+    box-shadow: inset 1px 2px 12px black;
+    width: 80%;
+    margin-left: 50px;
+    height: 100%;
+}
+
+.imgcontainer {
+    height: 250px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-top: -30px;
+}
+
+#gymcontainer img {
+    width: 100%;
+    height: 320px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.hr {
+    background-color: rgb(124, 124, 124);
+    height: .5px;
+}
+
+.serviceSummery {
+    width: 100%;
+    height: auto;
+    background-image: cover;
+    margin: 0px;
+}
+
+#waiter img {
+    width: 85%;
+    height: auto;
+}
+
+.serviceSummery h1:after {
+    content: " ";
+    background: orange;
+    display: block;
+    height: 2px;
+    width: 100%;
+}
+
+.serviceSummery #sideview {
+    padding: 50px 20px;
+    text-align: justify;
+}
+
+.innerview {
+    margin: 40px;
+    padding: 70px 0px;
+}
+
+.serviceSummery #sideview i {
+    color: orange;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    transition: all .8s;
+}
+
+#sideview :hover i {
+    transform: rotate(180deg);
+    font-size: 40px;
+}
+
+#sideview h4 {
+    text-decoration: underline;
+    color: rgb(18, 174, 185);
+}
+
+.serviceSummery #sideview i:after {
+    display: block;
+    content: " ";
+    width: 70px;
+    height: 70px;
+    border: 1px solid orange;
+    border-radius: 50px;
+    margin: -45px 10px;
+}
+
+.foodGallary {
+    background: rgb(31, 31, 31);
+    height: auto;
+}
+
+.foodGallary h1 {
+    border-radius: 20px;
+    padding: 5px;
+    display: inline-table;
+    color: orange;
+    position: relative;
+    left: 40%;
+}
+
+.foodGallary h1:after {
+    border: 1px solid orange;
+    content: " ";
+    display: block;
+}
+
+.foodGallary .meal-collection {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height: auto;
+    overflow: hidden;
+}
+
+.meals img {
+    margin-block-start: 560px;
+}
+
+.meal-collection li {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 350px;
+    height: 100%;
+    list-style: none;
+}
+
+.meals img {
+    margin-bottom: 50px;
+    margin: 0em 0em 0em 0em;
+    padding: 0;
+    float: left;
+    display: block;
+    width: 600px;
+    height: 250px;
+    transform: scale(1);
+    transition: all 0.9s ease-in;
+}
+
+.meals img:hover {
+    transition: all 0.5s ease-in;
+    transform: scale(1.23);
+    box-shadow: 1px 4px 100px rgb(255, 39, 79);
+}
+
+.separator {
+    width: 100%;
+    height: 200px;
+    background: rgb(20, 20, 20);
+}
+
+.testimonial {
+    width: 100%;
+    height: auto;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+    background-image: linear-gradient(rgba(43, 38, 27, 0.781), rgba(49, 48, 26, 0.589)), url(../images/close-up-of-l.jpg);
+    background-image: linear-gradient(rgba(10, 10, 10, 0.76), rgba(15, 15, 15, 0.267)), url(../images/restaurant/food-safety-edit-3b820d7798.jpg);
+    padding: 10px;
+}
+
+.testmony {
+    text-align: justify;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.testimonial .imgcustomer {
+    width: 30%;
+    margin-left: 30%;
+}
+
+@media (max-width:990px) {
+    .testmony img {
+        width: 20%;
+    }
+}
+
+.testimonial i {
+    margin-top: 20px;
+}
+
+.contactUs {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    background: rgb(197, 197, 197);
+}
+
+.text {
+    color: rgb(46, 46, 46);
+    text-decoration: underline;
+    font-size: 34px;
+    margin-bottom: 5%;
+}
+
+.text:before {
+    content: " ";
+    display: block;
+    width: 100%;
+    height: 10px;
+    background: #494949;
+    background: #9b8b01;
+    border-radius: 100px 0px 100px 0px;
+    margin-bottom: 3%;
+}
+
+.factsCollection {
+    padding: 20px 120px;
+    margin: 40px;
+}
+
+.factsCollection h5 {
+    margin-left: 15%;
+    font-weight: bold;
+}
+
+.facts i {
+    font-size: 30px;
+    border: 1px solid rgb(146, 140, 140);
+    padding: 20px;
+    border-radius: 30px 30px 0px 0px;
+    height: 100%;
+    width: fit-content;
+    margin: 10%;
+    color: rgb(235, 170, 5);
+    color: #9b8b01;
+    text-hadow: 1px 1px 1px rgb(59, 59, 59);
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+}
+
+.lookmap {
+    position: relative;
+    margin: 0px 20px;
+    color: rgb(39, 39, 153);
+    animation: rot 8s ease infinite;
+    transition: all 4s ease-in-out;
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg) translate(0px);
+    }
+    100% {
+        transform: rotate(360deg) translateY(10px);
+    }
+}
+
+.map h1:after {
+    background-color: rgb(45, 103, 226);
+    display: block;
+    width: 100%;
+    height: 25px;
+    animation: map 2s ease-in-out infinite;
+    content: " ";
+    transition: all 20s ease;
+}
+
+.footer:before {
+    content: " ";
+    display: block;
+    height: 50px;
+}
+
+.footer .contacts {
+    background: none;
+}
+
+#line li {
+    list-style: none;
+    padding: 10px;
+}
+
+.footer {
+    color: white;
+    width: 100%;
+    height: auto;
+    background: rgb(25, 28, 36);
+    background-size: cover;
+}
+
+.footer .text-pad {
+    margin: 0% 15%;
+    text-decoration: none;
+}
+
+.footer line:after {
+    content: " ";
+    display: none;
+}
+
+.footer li a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer h5 {
+    border-bottom: 1px dotted rgb(238, 238, 238);
+    width: 20%;
+    font-size: 14px;
+}
+
+#findus {
+    padding: 10px;
+    margin: 0px 10%;
+    margin-bottom: 2%;
+}
+
+#findus h6 {
+    font-size: 18px;
+}
+
+#findus i {
+    color: rgb(119, 119, 119);
+}
+
+.subscribe {
+    height: 400px
+}
+
+.footer h4:after {
+    background: white;
+    display: block;
+    height: 2px;
+    width: 100%;
+    content: " ";
+    opacity: .4;
+}
+
+.form {
+    background: rgb(14, 17, 24);
+    height: auto;
+}
+
+.copyright {
+    background: rgb(3, 3, 3);
+    color: white;
+    height: 60px;
+    width: 100%;
+}
+
+#developer {
+    float: right;
+    margin: 0px 20px;
+    padding-bottom: 10px;
+}
+
+.info i {
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid orange;
+    padding: 10px;
+    color: orange;
+    margin-left: 45%;
+    font-size: 25px;
+}
+
+.service .contact {
+    height: 50px;
+    background: rgba(132, 143, 32, 0.39);
+    background: rgba(93, 93, 62, 0.02);
+    background: rgba(97, 97, 36, 0.5);
+    border-bottom: 1px solid rgba(201, 212, 137, 0.616);
+    color: white;
+    margin-bottom: 2%;
+}
+
+.service .contact i {
+    margin: 7% 0%;
+    color: rgb(41, 41, 41);
+}
+
+.service h2 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    text-decoration: underline;
+    font-size: 23px;
+    margin-bottom: 1%;
+}
+
+.service {
+    z-index: -20;
+    margin-top: -20px;
+    padding: 0;
+    background-image: linear-gradient(rgba(22, 22, 22, 0.685), rgba(19, 19, 19, 0.5)), url(../images/1.jpg);
+    background-image: linear-gradient(rgba(8, 8, 8, 0.829), rgba(10, 10, 10, 0)), url(../images/francesca-saraco-65449.jpg);
+    background-image: liner-gradient(rgba(12, 106, 161, 0.829), rgba(10, 10, 10, 0));
+    background-repeat: no-repeat;
+    height: 150vh;
+    width: 100%;
+    background: linear-gradient(rgb(7, 43, 49), rgba(10, 10, 10, 0));
+    background: linear-gradient(rgb(172, 20, 58), rgba(10, 10, 10, 0));
+    background: url(../images/bedrm.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.discount img {
+    position: relative;
+    margin-top: -3%;
+    left: 20%;
+    -moz-animation: discount 5s ease-in-out infinite;
+    -webkit-animation: discount 5s ease-in-out infinite;
+    -o-animation: discount 5s ease-in-out infinite;
+    animation: discount 5s ease-in-out infinite;
+    transition: all 4s ease-in-out;
+    transform-origin: top;
+}
+
+@keyframes discount {
+    0% {
+        transform: rotateZ(-40deg);
+        transition: all 2s ease-in-out;
+    }
+    50% {
+        transform: rotateZ(40deg);
+        transition: all 2s ease-in-out;
+    }
+    100% {
+        transform: rotateZ(-40deg);
+        transition: all 2s ease-in-out;
+    }
+}
+
+@-moz-keyframes discount {
+    0% {
+        transform: rotateZ(-40deg);
+        transition: all 2s ease-in-out;
+    }
+    50% {
+        transform: rotateZ(40deg);
+        transition: all 2s ease-in-out;
+    }
+    100% {
+        transform: rotateZ(-40deg);
+        transition: all 2s ease-in-out;
+    }
+}
+
+@-o-keyframes discount {
+    0% {
+        transform: rotateZ(-40deg);
+        transition: all 2s ease-in-out;
+    }
+    50% {
+        transform: rotateZ(40deg);
+        transition: all 2s ease-in-out;
+    }
+    100% {
+        transform: rotateZ(-40deg);
+        transition: all 2s ease-in-out;
+    }
+}
+
+@-webkit-keyframes discount {
+    0% {
+        transform: rotateZ(-40deg);
+        transition: all 2s ease-in-out;
+    }
+    50% {
+        transform: rotateZ(40deg);
+        transition: all 2s ease-in-out;
+    }
+    100% {
+        transform: rotateZ(-40deg);
+        transition: all 2s ease-in-out;
+    }
+}
+
+.slideshow {
+    position: relative;
+    width: 90%;
+    height: 80vh;
+    overflow: hidden;
+    border: 1px solid rgb(93, 179, 190);
+    box-shadow: 1px 9px 4px rgb(51, 51, 51);
+    margin: 0px 10px 50px 50px;
+    color: white;
+}
+
+.slideshow .slide {
+    position: absolute;
+}
+
+.slideshow img:first-child {
+    position: static;
+    z-index: 100;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 800px;
+    height: 550px;
+    perspective: 3d;
+    border-bottom: 10px solid rgb(214, 214, 214);
+}
+
+.slideshow h5 {
+    position: absolute;
+    margin: 0px 120px;
+}
+
+.pricing {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background-size: contain;
+    background-position: center;
+    background: linear-gradient(rgb(26, 46, 51), rgba(10, 10, 10, 0));
+}
+
+.tabs img {
+    padding: 0;
+    height: 50%;
+    min-width: 100%;
+}
+
+.pricing h3 {
+    font-size: 30px;
+    color: white;
+    margin-bottom: -5%;
+    border-bottom: 1px solid grey;
+}
+
+.tabs h4::after {
+    display: block;
+    content: " ";
+    width: 100px;
+    height: 2px;
+    background: rgb(104, 104, 104);
+    margin: 5% 30%;
+}
+
+.tabs ul {
+    margin: 0px 10%;
+}
+
+.tabs ul li {
+    list-style: none;
+    line-height: 30px;
+    color: rgb(77, 77, 77);
+}
+
+.tabs i {
+    color: rgb(19, 48, 65);
+    margin: 2% 45%;
+    font-size: 34px;
+}
+
+.tabs .disable {
+    color: grey;
+    text-decoration: line-through;
+}
+
+.tabs img {
+    height: 250px;
+}
+
+.pricing .tabs {
+    border: 1px solid rgb(133, 130, 130);
+    border: 1px solid rgb(179, 183, 187);
+    border: 1px solid rgb(143, 169, 194);
+    box-shadow: inset 34px 80px 89px rgb(131, 130, 130);
+    box-shadow: 30px 100px 39px rgba(131, 130, 130, 0.671);
+    color: white;
+    margin-top: 10%;
+    border-radius: 20px;
+    margin: 8% 4.5%;
+    height: auto;
+    width: 300px;
+}
+
+.tabs {
+    overflow: hidden;
+}
+
+.priceTag {
+    position: absolute;
+    background: rgba(89, 89, 139, 0.5);
+    background: rgba(98, 141, 155, 0.335);
+    background: rgba(102, 123, 129, 0.37);
+    background: rgba(36, 56, 61, 0.425);
+    box-shadow: 1px 2px 2px rgba(37, 27, 27, 0.644);
+    border: 1px solid rgba(187, 187, 236, 0.616);
+    margin: 10px -15px;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    transform: translateX(300px);
+    text-align: center;
+    transition: all 2s ease;
+}
+
+.tabs:hover .priceTag {
+    transform: translateX(0px);
+}
+
+.active {
+    transition: all 2s ease;
+    opacity: 1;
+}
+
+.priceTag h5 {
+    font-size: 30px;
+    margin: 40px 0px;
+    color: rgb(49, 47, 47);
+    color: rgb(255, 255, 255);
+}
+
+.interior {
+    height: 100vh;
+    width: 100%;
+    background: grey;
+    background: linear-gradient(rgba(10, 10, 10, 0.856), rgba(83, 83, 83, 0)), url(../images/bedroom2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.interior h2 {
+    border-bottom: 1px solid white;
+    text-align: center;
+    margin: 0% 20%;
+    color: white;
+}
+
+.reservation {
+    margin: 5% 10%;
+    padding: 0% 10%;
+    text-align: center;
+    color: black;
+    height: 300px;
+}
+
+.reservation label {
+    color: white;
+}
+
+.reservation h4 {
+    color: white;
+}
+
+.reservation .form {
+    background: rgba(22, 21, 21, 0.274);
+    border: 1px solid rgb(73, 100, 136);
+    min-height: 95%;
+    padding: 4% 1%;
+}
+
+.reservation .form i {
+    color: rgb(46, 179, 231);
+    position: absolute;
+    top: 65%;
+    left: 91%;
+}
+
+option {
+    color: black;
+}
+
+.reservation input[type=text] {
+    margin: 10px;
+}
+
+.reservation .btn {
+    margin: 3% 17%;
+    ;
+}
+
+.gallary {
+    height: auto;
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(102, 123, 129, 0.37))
+}
+
+.hotelviewContainer {
+    height: 500px;
+    position: relative;
+}
+
+.hotels {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.hotels img:hover {
+    transform: scale(3);
+    transition: all 8s ease
+}
+
+.gallary:hover {
+    background: black;
+}

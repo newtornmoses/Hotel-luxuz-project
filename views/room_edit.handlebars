@@ -1,0 +1,33 @@
+
+<h2 class="text-center">ROOM NO: {{room.room_number}}</h2>
+
+<form action="/hotel/rooms/update/{{room._id}}" method="Post" class="col-md-6 col-md-offset-3 container">
+
+        
+ <h4>Room Class: <input type="text" name="class" class="form-control" value="{{room.class}}"> </h4>
+ 
+   <h4>Book status: <input type="text"  name="active" class="form-control" value="{{room.isActive}}"></h4>
+
+
+ 
+  
+ <h4>Room Number: <input type="text" name="room" class="form-control" value="{{room.room_number}}">  </h4>
+ <h4>Room Size: <input type="text" name="size" class="form-control" value="{{room.room_size}}"></h4>
+ <h4>Meals:<input type="text" name="meals" class="form-control" value="{{room.meals}}"></h4>
+  <h4>Price per Night:$</h4><input type="text" name="price" class="form-control" value="{{room.price}}">
+  <h4>Paid:</h4><input type="text" name="paid" class="form-control" value="{{room.beds}}">
+   
+   <h4>HI-FI Wifi:<input type="text" name="wifi" class="form-control" value="{{room.wifi}}"></h4>
+ <h4>Swimming Pool:<input type="text" name="pool" class="form-control" value="{{room.swimmingpool}}"> </h4>
+ <h4>Medical Doctor:<input type="text" name="medical" class="form-control" value="{{room.medical_service}}"></h4>
+ <h4>Balcony:<input type="text" name="balcony" class="form-control" value="{{room.balcony}}"></h4>
+ 
+
+      
+       
+ 
+<a href="/hotelluxuz/hotel/rooms" class="btn btn-success">Back to Rooms</a>
+<button type="submit" class="btn btn-primary pull-right">Update</button>
+
+
+</form>

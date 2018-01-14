@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/stylemain.css">
+
+    <link rel="stylesheet" href="/font/css/font-awesome.min.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="frontPage3">
+        <div class="contact">
+            <ul>
+                <li class="contacts">
+                    <i class="fa fa-phone"></i>
+                    <a href="#"> Contact us : +44-502-2023-1</a>
+                </li>
+                <li class="contacts">
+                    <i class="fa fa-envelope"></i>
+                    <a href="#">Email us: info@luxuzhotels.com</a>
+                </li>
+
+                {{#if user}}
+        <li style="color:black" class="pull-right ">
+                  
+            <h5>
+                <i class="fa fa-user-circle"></i>
+                You are logged in as {{user.username}}
+                </h5>
+            
+             </li>
+        {{else}}
+        <li style="color:black" class="pull-right ">
+             You are logged in as a guest
+             </li>
+        
+        {{/if}}
+            </ul>
+
+            <li style="color:black" class="myhambager pull-right">
+                   
+                    <i class="hambager fa fa-bars fa-3x"></i>
+                    
+                    
+            </li>
+
+            </div>
+              
+
+        <ul class="navigation">
+
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="/hotelluxuz/home">Home</a>
+            </li>
+            <li>
+                <i class="fa fa-hotel"></i>
+                <a href="/hotelluxuz/rooms&suites">Rooms & Suites</a>
+            </li>
+
+            <li>
+                <i class="fa fa-shopping-cart"></i>
+                <a href="/hotelluxuz/shop">Food Orders</a>
+            </li>
+
+            <li>
+                <i class="fa fa-shopping-cart">
+                    <a href="/hotelluxuz/shop/cart/shopping_cart"> Cart</i>
+              
+                <span class="badge">
+                    {{#if session.cart}} {{session.cart.totalQty}} {{else}} 0 {{/if}}
+                </span>  </a>
+            </li>
+
+
+                                 {{#if user}}
+        <li class="profile">
+            <i class="fa fa-users"></i>
+            <a href="/hotelluxuz/shop/profile">Profile</a>
+        </li>
+
+        <li class="logout">
+            <i class="fa fa-sign-out"></i>
+            <a href="/hotelluxuz/users/logout">LogOut</a>
+        </li>
+
+
+        {{else}}
+        <li class="login">
+            <i class="fa fa-key"></i>
+            <a href="/hotelluxuz/users/login">Login</a>
+        </li>
+
+
+        <li class="sign up">
+            <i class="fa fa-book"></i>
+            
+            <a href="/hotelluxuz/users/signup">Sign up</a>
+        </li>
+        {{/if}}
+
+
+
+        </ul>
+        
+        </ul>
+        
+        
+    </section>
+
+    <section class="header-shop">
+ {{#if success}}
+
+            <div class="col-md-4 col-md-offset-4 alert alert-success">
+                <h6 class="text-center">{{success}}</h6>
+            </div>
+            {{/if}}
+            <br>
+        <h1 class="order">Order & We Deliver</h1>
+       
+
+    </section>
+
+
+    <h5 class="text-center">welcome {{user.username}}</h5>
+    <section class="shop">
+        <div class="container">
+            <h1 class="text-center">
+                <u> Order Now!!!</u>
+            </h1>
+
+
+            <div class="col-md-12 shopheader">
+                <div class="col-md-6">
+                    <h4>Total products
+                        <span class="badge">{{shop.length}}</span>
+                    </h4>
+                </div>
+
+
+                <div class="col-md-4 col-md-offset-2">
+                    <h4>
+                        <i class="fa fa-shopping-cart">
+                            <a href="/hotelluxuz/shop/cart/shopping_cart"> View Your Cart</i>
+                        </a>
+                        <span class="badge">
+                            {{#if session.cart}} {{session.cart.totalQty}} {{else}} 0 {{/if}}
+                        </span>
+                    </h4>
+                </div>
+
+            </div>
+
+            <div class="col-md-12 shop">
+                {{#each shop}}
+
+                <ul>
+
+
+                    <div class="col-xs-8  col-sm-offset-0  col-sm-6 col-md-4">
+                        <li>
+
+                            <div class="content">
+                                <h2 class="text-center list-group-item title">
+                                    <a href="/hotelluxuz/shop/{{this._id}}">{{this.title}}
+                                </h2>
+                                <span>
+                                    <img class="img-responsive" src="{{this.image}}" alt="{{this.title}}">
+                                </span>
+                                </a>
+                                <div class="details list-group-item text-primary">
+                                    <div class="description">
+                                        <p>Descrition : {{this.description}}</p>
+                                    </div>
+                                    <span class="btn btn-primary price">Price: $ {{this.price}}</span>
+                                    <a href="/hotelluxuz/shop/cart/{{this._id}}" class="btn btn-success btn-block">Add To Cart</a>
+                                </div>
+                            </div>
+                        </li>
+                    </div>
+
+                </ul>
+
+                {{/each}}
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <!--footer-->
+    <section class="footer">
+        <div class="row">
+            <div class="col-md-12 contacts">
+
+                <h4 class="text-center">YOU CAN ALSO FOLLOW US ON</h4>
+                <div id="findus" class="col-md-12">
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <img src="/images/72/Twitter-Icon-2.png" alt="">
+                        <h6>twitter</h6>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <img src="/images/72/facebook-Icon.png" alt="">
+
+                        <h6> facebook</h6>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <img src="/images/72/Pinterest-Icon.png" alt="">
+
+                        <h6>Pinterest</h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <div id="line" class=" col-xs-offset-3  col-md-offset-0 col-sm-offset-0   col-sm-4 col-md-4">
+                    <h5 class="text-pad">Contact Us</h5>
+                    <ul>
+
+                        <li><i class="fa fa-phone"></i> +44-02-555 1666</li>
+                        <li> <i class="fa fa-tablet"></i> +041-02-5005 1888</li>
+                        <li> <i class="fa fa-envelope"></i> info@luxuzhotels.com</li>
+                        <li> <i class="fa fa-telegram"></i> Sun – Thu 8:00 AM-5:00 PM</li>
+
+                    </ul>
+                </div>
+
+
+                <div id="line" class=" col-xs-offset-3 col-md-offset-0 col-sm-offset-0 col-sm-4 col-md-4">
+                    <h5 class="text-pad"> Quick Links</h5>
+                    <ul>
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="/hotelluxuz/home">Home</a>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-hotel"></i>
+                            <a href="/hotelluxuz/rooms&suites">Rooms & Suites</a>
+                        </li>
+                       
+                        <li>
+                            <i class="fa fa-shopping-cart"></i>
+                            <a href="/hotelluxuz/shop">Food Orders</a>
+                        </li>
+                             {{#if user}}
+        <li class="profile">
+            <i class="fa fa-users"></i>
+            <a href="/hotelluxuz/shop/profile">Profile</a>
+        </li>
+
+        <li class="logout">
+            <i class="fa fa-sign-out"></i>
+            <a href="/hotelluxuz/users/logout">LogOut</a>
+        </li>
+
+
+        {{else}}
+        <li class="login">
+            <i class="fa fa-key"></i>
+            <a href="/hotelluxuz/users/login">Login</a>
+        </li>
+
+
+        <li class="sign up">
+            <i class="fa fa-book"></i>
+            
+            <a href="/hotelluxuz/users/signup">Sign up</a>
+        </li>
+        {{/if}}
+
+
+
+        </ul>
+        
+
+                    </ul>
+                </div>
+
+
+                <div id="line" class="  col-xs-offset-3 col-md-offset-0 col-sm-offset-0 col-sm-4 col-md-4">
+                    <h5 class="text-pad">Our Hotels</h5>
+                    <ul>
+
+                        <li> * Hotel Luxuz Dubai</li>
+                        <li> * Hotel Luxuz Australia</li>
+                        <li> * Hotel Luxuz Moscow</li>
+                        <li> * Hotel LUxuz London</li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="row form2">
+                <div class=" form">
+                    <div class=" subscribe ">
+                    </div>
+                    <div class="col-xsm-6 col-md-4 subscribe">
+                        <p class="text-center"> Get in touch with us today. </p>
+                        {{#if success}}
+                          <div class="alert alert-success">
+                              {{success}}
+                          </div>
+                        {{/if}}
+
+                         {{#if danger}}
+                         <div class="alert alert-danger">
+                              {{danger}}
+                          </div>
+                        {{/if}}
+                        <form class="col-xs-6 col-sm-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-12 col-md-12 form-group " method="POST" action="/hotelluxuz/customerEmail">
+                            <label for="email">Name</label>
+                            <input type="text" placeholder="your name here" class="form-control" name="name" required>
+                            <label for="email">Email</label>
+                            <input type="text" placeholder="your email here" class="form-control" name="email" required>
+                              <label for="email">Message</label>
+                            <textarea type="text" placeholder="your message here" rows="5" class="form-control" name="message" required></textarea>
+
+                            <br>
+                            <button class="btn btn-primary btn-block" type="submit">send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!--copyright-->
+    <section class="copyright">
+        <p class="year"></p>
+        <p id="developer"> Developed & Desgned By Newtorn Moses L</p>
+    </section>
+
+    <!--javascript-->
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>

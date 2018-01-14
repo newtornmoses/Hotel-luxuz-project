@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rooms & Suites</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/css/stylemain.css" rel="stylesheet">
+    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/fonts/font-awesome/font/css/font-awesome.min.css">
+    
+</head>
+
+<body>
+
+    <section class="service">
+
+        <div class="contact">
+            <ul>
+                <li class="smallscreen">
+                    
+                    <h4> Rooms & Services</h4>
+                </li>
+
+                <li>
+                    <i class="fa fa-phone"></i>
+                    <a href="#"> Contact us : +971-522-223-1</a>
+                </li>
+                <li>
+                    <i class="fa fa-envelope"></i>
+                    <a href="#">Email us: info@luxuzhotels.com</a>
+                </li>
+
+                 <li class="pull-right checkroom">
+                    <a href="/hotelluxuz/hotel/rooms" class="btn btn-danger">Check Room Availability</a>
+                </li>
+
+                <li class="myhambager pull-right">
+                   
+                    <i class="hambager fa fa-bars fa-3x"></i>
+                    
+                    
+                </li>
+            </ul>
+        </div>
+
+        <ul class="navigation">
+
+            <li>
+                <i class="fa fa-home"></i>
+                <a href="/hotelluxuz/home">Home</a>
+            </li>
+            <li>
+                <i class="fa fa-hotel"></i>
+                <a href="#">Rooms & Suites</a>
+            </li>
+            
+            <li>
+                <i class="fa fa-shopping-cart"></i>
+                <a href="/hotelluxuz/shop">Food Orders</a>
+            </li>
+            
+                             {{#if user}}
+        <li class="profile">
+            <i class="fa fa-users"></i>
+            <a href="/hotelluxuz/shop/profile">Profile</a>
+        </li>
+
+        <li class="logout">
+            <i class="fa fa-sign-out"></i>
+            <a href="/hotelluxuz/users/logout">LogOut</a>
+        </li>
+
+
+        {{else}}
+        <li class="login">
+            <i class="fa fa-key"></i>
+            <a href="/hotelluxuz/users/login">Login</a>
+        </li>
+
+
+        <li class="sign up">
+            <i class="fa fa-book"></i>
+            
+            <a href="/hotelluxuz/users/signup">Sign up</a>
+        </li>
+        {{/if}}
+
+            <li class="navroom">
+                    <a href="/hotelluxuz/hotel/rooms" class="btn btn-danger ">Check Room Availability</a>
+                </li>
+
+        </ul>
+        
+
+
+
+        </ul>
+        
+         <h2  class="fullscreen">Rooms & Suites</h2>
+        
+<!--discount-->
+
+      <div class="discount col-md-12">
+               
+          <img  src="/images/discount.png" >
+      </div>
+    
+        <!--slideshow-->
+    <div class=" cycle-slideshow  slideshow"  data-cycle-fx="tileSlide"
+    data-cycle-timeout="3000">
+      
+        <img class="img-reponsive" src="/images/raining-huang-31298.jpg" alt="">
+        <img class="img-responsive" src="/images/rhema.jpg" alt="">
+        <img class="img-responsive" src="/images/neonbrand-381374.jpg" alt="">
+        <img class="img-responsive" src="/images/shane-mcknight-329794.jpg" alt="">
+        <img class="img-responsive" src="/images/close-up-of-l.jpg" alt="">
+        <img class="img-responsive" src="/images/spacious-hall.jpg" alt="">
+        <img class="img-responsive" src="/images/hotel.jpg" alt="">
+
+    </div>
+        
+
+    </section>
+
+    <!--pricing-->
+    <section class="pricing">
+        <h3 class="text-center">BOOK YOUR FAVOURATE ROOM NOW!!!</h3>
+        <div class="row">
+            
+            <div class="  col-xs-12 col-xs-offset-3 col-md-offset-0 col-sm-offset-1 col-md-12">
+                    
+                <div class="col-xs-4 col-xs-offset-2  col-sm-4 col-md-4 tabs">
+                       
+                    <div class="priceTag">
+                        <h5>$80</h5>
+
+                        <h5>Per Night</h5>
+<form action="/hotelluxuz/hotel/rooms/Comfort" method="Get">
+                       
+   
+    <button type="submit"  class=" btn btn-success">Book Now</button>
+  
+</form>                    </div>
+                    <img class="img-responsive imgHovered" src="/images/rhema.jpg" alt="">
+                    <h4 class="text-center">COMFORT ROOM</h4>
+                    <ul>
+                        <li> Restaurant Food</li>
+                        <li class="disable"> High Speed Wifi</li>
+                        <li> Swimming Pool</li>
+                        <li class="disable"> Private Balcony</li>
+                        <li class="disable"> One Call Doctor</li>
+                        <li> Restaurant Gym</li>
+                        <li class="disable"> Massage</li>
+
+                    </ul>
+
+                </div>
+                <div class="col-xs-3 col-sm-4  col-md-4 tabs">
+                    <div class="priceTag">
+                        <h5>$120</h5>
+
+                        <h5>Per Night</h5>
+                       <form action="/hotelluxuz/hotel/rooms/Delux" method="Get">
+    
+  
+    <button type="submit"  class=" btn btn-success">Book Now</button>
+  
+</form>
+                    </div>
+
+                    <img class="img-responsive imgHovered" src="/images/hotel room.jpg" alt="">
+                    <h4 class="text-center">DELUX ROOM</h4>
+                    <ul>
+                        <li> Restaurant Food</li>
+                        <li class="disable"> High Speed Wifi</li>
+                        <li> Swimming Pool</li>
+                        <li class="disable"> Private Balcony</li>
+                        <li> One Call Doctor</li>
+                        <li> Restaurant Gym</li>
+                        <li> Massage</li>
+
+                    </ul>
+                </div>
+
+                <div class="col-xs-3 col-sm-4  col-md-4 tabs">
+                    <div class="priceTag">
+                        <h5>$200</h5>
+
+                        <h5>Per Night</h5>
+    <form action="/hotelluxuz/hotel/rooms/Luxury" method="Get">
+    
+ 
+    <button type="submit"  class=" btn btn-success">Book Now</button>
+  
+</form>
+                         
+                    </div>
+
+                    <img class="img-responsive imgHovered" src="/images/Hotel-Marketplace.jpg" alt="">
+
+                    <h4 class="text-center">LUXURY ROOM</h4>
+                    <ul>
+                        <li> Restaurant Food</li>
+                        <li> High Speed Wifi</li>
+                        <li> Swimming Pool</li>
+                        <li> Private Balcony</li>
+                        <li> One Call Doctor</li>
+                        <li> Restaurant Gym</li>
+                        <li> Massage</li>
+
+                    </ul>
+                </div>
+
+               
+  
+            </div>
+        </div>
+    </section>
+
+
+<section class="interior">
+    <h2 class="text-center">
+        <i class="fa fa-hotel"> Room Reservation</i>
+    </h2>
+   
+    
+ <div class="row reservation">
+        <h4>please fill the form below</h4>  
+    <form  id="form" action="/hotelluxuz/hotel/rooms"  method="GET" class="form-group form">
+                      
+        <div class="col-md-12">
+            <div class="col-md-4">
+                    <label for="Check-In">No. of People</label>
+                    
+                     <select id="guests" class="form-control">
+                        <option  value="2">1 Adult</option>
+                        <option value="2">2 Adults</option>
+                        <option value="4">4 Adults</option>
+                        <option value="6">6 Adults</option>
+                        
+                        <option value="12">more than 6 Adults</option>
+                       
+                        
+                        
+                    </select>
+               <div class="children">
+                        <label for="Check-In">No. of children</label>
+                        <select class="form-control">
+                                <option value="">None </option>
+                                <option value="1">1 </option>                                
+                                <option value="2">2 </option>
+                                <option value="4">3-6 </option>
+                                
+                            
+                                
+                            </select>
+                        </div>
+            </div>
+            <div class="col-md-4">
+                    <label for="room">Room Type  </label>
+                    
+                    <select  id="rooms"  type="text"  class="form-control" >
+                        
+                        <option value="Comfort">Comfort</option>
+                        <option value="Delux">Delux</option>
+                        <option value="Luxury">Luxury</option>
+                       
+                        </select>
+                      
+            
+            </div>
+
+            <div class="col-md-4">
+                    <label for="Check-In">Check-In</label>
+                    <i class="fa fa-calendar"></i><input type="text"  class="form-control datepicker" >
+            
+                   </div>
+
+                   <div class="col-md-4">
+                        <label for="Check-In">Check-Out</label>
+                        <i class="fa fa-calendar"></i><input type="text"  class="form-control datepicker2" >
+                       
+                              </div>
+                            </div>
+        
+                <div class="col-md-6 btn">
+                    <button type="submit" class="btn btn-primary btn-block"> Check for availability</button>
+                </div>
+            </form>
+        </div>
+    
+</section>
+
+<!--gallary-->
+<section class="gallary">
+     <h4 class="text-center">Capture the best view</h4> 
+     <div class="col-md-12 ">
+         <div class="col-md-4 hotels">
+             <img class="img-responsive" src="/images/hotel6.jpg" alt="">
+         </div>
+         <div class="col-md-4 hotels">
+             <img class="img-responsive" src="/images/hotel4.jpg" alt="">
+            
+         </div>
+         <div class="col-md-4 hotels">
+             <img class="img-responsive" src="/images/hotel3.jpg" alt="">
+              
+         </div>
+         
+     </div>
+    </section>
+
+
+
+  <!--footer-->
+    <section class="footer">
+        <div class="row">
+            <div class="col-md-12 contacts">
+
+                <h4 class="text-center">YOU CAN ALSO FOLLOW US ON</h4>
+                <div id="findus" class="col-md-12">
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <img src="/images/72/Twitter-Icon-2.png" alt="">
+                        <h6>twitter</h6>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <img src="/images/72/facebook-Icon.png" alt="">
+
+                        <h6> facebook</h6>
+                    </div>
+
+                    <div class="col-xs-4 col-sm-4 col-md-4">
+                        <img src="/images/72/Pinterest-Icon.png" alt="">
+
+                        <h6>Pinterest</h6>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <div id="line" class=" col-xs-offset-3  col-md-offset-0 col-sm-offset-0   col-sm-4 col-md-4">
+                    <h5 class="text-pad">Contact Us</h5>
+                    <ul>
+
+                        <li><i class="fa fa-phone"></i> +44-02-555 1666</li>
+                        <li> <i class="fa fa-tablet"></i> +041-02-5005 1888</li>
+                        <li> <i class="fa fa-envelope"></i> info@luxuzhotels.com</li>
+                        <li> <i class="fa fa-telegram"></i> Sun – Thu 8:00 AM-5:00 PM</li>
+
+                    </ul>
+                </div>
+
+
+                <div id="line" class=" col-xs-offset-3 col-md-offset-0 col-sm-offset-0 col-sm-4 col-md-4">
+                    <h5 class="text-pad"> Quick Links</h5>
+                    <ul>
+                        <li>
+                            <i class="fa fa-home"></i>
+                            <a href="/hotelluxuz/home">Home</a>
+                        </li>
+
+                        <li>
+                            <i class="fa fa-hotel"></i>
+                            <a href="/hotelluxuz/rooms&suites">Rooms & Suites</a>
+                        </li>
+                       
+                        <li>
+                            <i class="fa fa-shopping-cart"></i>
+                            <a href="/hotelluxuz/shop">Food Orders</a>
+                        </li>
+                             {{#if user}}
+        <li class="profile">
+            <i class="fa fa-users"></i>
+            <a href="/hotelluxuz/shop/profile">Profile</a>
+        </li>
+
+        <li class="logout">
+            <i class="fa fa-sign-out"></i>
+            <a href="/hotelluxuz/users/logout">LogOut</a>
+        </li>
+
+
+        {{else}}
+        <li class="login">
+            <i class="fa fa-key"></i>
+            <a href="/hotelluxuz/users/login">Login</a>
+        </li>
+
+
+        <li class="sign up">
+            <i class="fa fa-book"></i>
+            
+            <a href="/hotelluxuz/users/signup">Sign up</a>
+        </li>
+        {{/if}}
+
+
+
+        </ul>
+        
+
+                    </ul>
+                </div>
+
+
+                <div id="line" class="  col-xs-offset-3 col-md-offset-0 col-sm-offset-0 col-sm-4 col-md-4">
+                    <h5 class="text-pad">Our Hotels</h5>
+                    <ul>
+
+                        <li> * Hotel Luxuz Dubai</li>
+                        <li> * Hotel Luxuz Australia</li>
+                        <li> * Hotel Luxuz Moscow</li>
+                        <li> * Hotel LUxuz London</li>
+
+                    </ul>
+                </div>
+
+            </div>
+
+            <hr>
+
+            <div class="row form2">
+                <div class=" form">
+                    <div class=" subscribe ">
+                    </div>
+                    <div class="col-xsm-6 col-md-4 subscribe">
+                        <p class="text-center"> Get in touch with us today. </p>
+                        {{#if success}}
+                          <div class="alert alert-success">
+                              {{success}}
+                          </div>
+                        {{/if}}
+
+                         {{#if danger}}
+                         <div class="alert alert-danger">
+                              {{danger}}
+                          </div>
+                        {{/if}}
+                        <form class="col-xs-6 col-sm-6 col-xs-offset-3 col-sm-offset-3 col-md-offset-12 col-md-12 form-group " method="POST" action="/hotelluxuz/customerEmail">
+                            <label for="email">Name</label>
+                            <input type="text" placeholder="your name here" class="form-control" name="name" required>
+                            <label for="email">Email</label>
+                            <input type="text" placeholder="your email here" class="form-control" name="email" required>
+                              <label for="email">Message</label>
+                            <textarea type="text" placeholder="your message here" rows="5" class="form-control" name="message" required></textarea>
+
+                            <br>
+                            <button class="btn btn-primary btn-block" type="submit">send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <!--copyright-->
+    <section class="copyright">
+        <p class="year"></p>
+        <p id="developer"> Developed & Desgned By Newtorn Moses L</p>
+    </section>
+
+    <!--javascript-->
+    <script src="/js/main.js"></script>
+
+</body>
+
+</html>
